@@ -1,0 +1,18 @@
+extends templates/layout
+
+block content
+  h2 Welcome to Join us!
+  if errorMessage
+    span=errorMessage
+  form(method="POST")
+    input(name="username", placeholder="Username", required)
+    input(name="name", placeholder="Name", required)
+    input(name="password", placeholder="Password",type="password", required)
+    input(name="password2", placeholder="Confirm Password",type="password", required)
+    input(type="submit", value="Join")
+  
+
+  div
+    span Aleady have a account ?
+    br
+    a(href="/login") Login now &rarr;

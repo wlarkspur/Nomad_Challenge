@@ -1,0 +1,15 @@
+extends templates/layout
+
+block content
+  h2 We are ready to inspire you
+  if errorMessage
+    span=errorMessage
+  form(method="POST")
+    input(name="username", placeholder="Username", required)
+    input(name="password",type="password", placeholder="Password", required)
+    input(type="submit", value="Login")
+
+  
+    span You don't have a account ?
+    br
+    a(href="/join") Creat account now &rarr;
